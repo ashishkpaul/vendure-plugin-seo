@@ -37,15 +37,10 @@ export const SeoCustomFields: CustomFieldConfig[] = [
     graphQLType: "Asset",
     entity: Asset,
     label: [
-      { languageCode: LanguageCode.en, value: "Facebook SEO image" },
-      { languageCode: LanguageCode.it, value: "Immagine SEO Facebook" },
+      { languageCode: LanguageCode.en, value: "Facebook SEO image" },      
     ],
     description: [
       { languageCode: LanguageCode.en, value: "Recommended size: 1200x630px" },
-      {
-        languageCode: LanguageCode.it,
-        value: "Dimensione consigliata: 1200x630px",
-      },
     ],
     ui: { tab: "SEO" },
     eager: true,
@@ -57,15 +52,10 @@ export const SeoCustomFields: CustomFieldConfig[] = [
     graphQLType: "Asset",
     entity: Asset,
     label: [
-      { languageCode: LanguageCode.en, value: "Twitter SEO image" },
-      { languageCode: LanguageCode.it, value: "Immagine SEO Twitter" },
+      { languageCode: LanguageCode.en, value: "Twitter SEO image" },      
     ],
     description: [
       { languageCode: LanguageCode.en, value: "Recommended size: 1200x675px" },
-      {
-        languageCode: LanguageCode.it,
-        value: "Dimensione consigliata: 1200x675px",
-      },
     ],
     ui: { tab: "SEO" },
     eager: true,
