@@ -16,7 +16,7 @@ export const SeoCustomFields: CustomFieldConfig[] = [
     type: "localeString",
     label: [{ languageCode: LanguageCode.en, value: "SEO Description" }],
     description: [
-      { languageCode: LanguageCode.en, value: "Product description" },
+      { languageCode: LanguageCode.en, value: "Product/Service description" },
     ],
     ui: { component: "text-form-input", tab: "SEO" },
     validate: (value: string) => {
