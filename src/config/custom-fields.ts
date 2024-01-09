@@ -4,9 +4,9 @@ export const SeoCustomFields: CustomFieldConfig[] = [
   {
     name: "seoTitle",
     type: "localeString",
-    label: [
-      { languageCode: LanguageCode.en, value: "SEO Title" },
-      { languageCode: LanguageCode.it, value: "SEO Title" },
+    label: [{ languageCode: LanguageCode.en, value: "SEO Title" }],
+    description: [
+      { languageCode: LanguageCode.en, value: "Product/Service Title" },
     ],
     ui: { tab: "SEO" },
     public: false,
@@ -14,18 +14,21 @@ export const SeoCustomFields: CustomFieldConfig[] = [
   {
     name: "seoDescription",
     type: "localeString",
-    label: [
-      { languageCode: LanguageCode.en, value: "SEO Description" },
-      { languageCode: LanguageCode.it, value: "Descrizione SEO" },
-    ],
+    label: [{ languageCode: LanguageCode.en, value: "SEO Description" }],
     description: [
-      { languageCode: LanguageCode.en, value: "SEO description" },
-      {
-        languageCode: LanguageCode.it,
-        value: "Descrizione SEO",
-      },
+      { languageCode: LanguageCode.en, value: "Product description" },
     ],
-    ui: { tab: "SEO" },
+    ui: { component: "text-form-input", tab: "SEO" },
+    validate: (value: string) => {
+        if (value?.length > 255) {
+          return [
+            {
+              value: "Meta description can be max 255 characters",
+              languageCode: LanguageCode.en,
+            },
+          ];
+        }
+    },
     public: false,
   },
   {
@@ -38,7 +41,7 @@ export const SeoCustomFields: CustomFieldConfig[] = [
       { languageCode: LanguageCode.it, value: "Immagine SEO Facebook" },
     ],
     description: [
-      { languageCode: LanguageCode.en, value: "Reccommended size: 1200x630px" },
+      { languageCode: LanguageCode.en, value: "Recommended size: 1200x630px" },
       {
         languageCode: LanguageCode.it,
         value: "Dimensione consigliata: 1200x630px",
@@ -58,7 +61,7 @@ export const SeoCustomFields: CustomFieldConfig[] = [
       { languageCode: LanguageCode.it, value: "Immagine SEO Twitter" },
     ],
     description: [
-      { languageCode: LanguageCode.en, value: "Reccommended size: 1200x675px" },
+      { languageCode: LanguageCode.en, value: "Recommended size: 1200x675px" },
       {
         languageCode: LanguageCode.it,
         value: "Dimensione consigliata: 1200x675px",
